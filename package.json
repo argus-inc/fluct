@@ -6,5 +6,8 @@
   "repository": "git://github.com/argus-inc/fluct.git",
   "author": "Mederic Burlet",
   "license": "GPL-3-0-only",
-  "private": false
+  "private": false,
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/argus-inc"
+  }
 }
