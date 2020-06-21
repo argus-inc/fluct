@@ -1,0 +1,10 @@
+{
+  "name": "fluct",
+  "version": "0.0.1",
+  "description": "Enhanced file system handler for nodejs",
+  "main": "src/index.ts",
+  "repository": "git://github.com/argus-inc/fluct.git",
+  "author": "Mederic Burlet",
+  "license": "GPL-3-0-only",
+  "private": false
+}
