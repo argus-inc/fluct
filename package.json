@@ -1,6 +1,6 @@
 {
   "name": "@argus-inc/fluct",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Enhanced file system handler for nodejs",
   "main": "lib/FileHandler.js",
   "types": "lib/FileHandler.d.ts",
