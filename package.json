@@ -1,6 +1,6 @@
 {
   "name": "@argus-inc/fluct",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Enhanced file system handler for nodejs",
   "main": "lib/FileHandler.js",
   "types": "lib/FileHandler.d.ts",
@@ -9,7 +9,7 @@
     "prepare": "npm run build",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
-    "patch": "npm version patch && npm publish" 
+    "patch": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
