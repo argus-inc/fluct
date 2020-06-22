@@ -1,8 +1,15 @@
 {
   "name": "@argus-inc/fluct",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Enhanced file system handler for nodejs",
-  "main": "src/index.ts",
+  "main": "lib/FileHandler.js",
+  "types": "lib/FileHandler.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/argus-inc/fluct"
@@ -11,6 +18,12 @@
   "license": "GPL-3-0-only",
   "private": false,
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/argus-inc"
+    "registry": "https://npm.pkg.github.com/argus-inc"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^14.0.13"
   }
 }
