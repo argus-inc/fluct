@@ -12,11 +12,11 @@ import * as fs from 'fs'
 export class FileHandler {
     /**
      * Holds the temp directory name
-     */ 
+     */
     public tempDirectoryName: string;
     /**
      * Holds the temp directory path
-     */ 
+     */
     public tempDirectoryPath: string;
 
     constructor(tempDirectoryName = ".fluct") {
@@ -31,7 +31,7 @@ export class FileHandler {
      * @returns `boolean`  - True if the folder exists
      *
      */
-    doesTempDirExist = ():boolean => {
+    doesTempDirExist = (): boolean => {
         const pathed = path.join(this.tempDirectoryPath);
         if (fs.existsSync(pathed)) {
             return true
@@ -108,7 +108,7 @@ export class FileHandler {
         if (this.exists(path)) {
             fs.unlinkSync(path)
         }
-    } 
+    }
 
     /**
      * Reads the content of a file in sync
@@ -120,7 +120,7 @@ export class FileHandler {
      * @remark TODO: add encoding customization
      *
      */
-    read = (path: string) => fs.readFileSync(path,{encoding:'utf8', flag:'r'})
+    read = (path: string) => fs.readFileSync(path, { encoding: 'utf8', flag: 'r' })
 
     /**
      * Saves content to a file at a given path in sync
@@ -138,7 +138,7 @@ export class FileHandler {
             case "object":
                 formatedContent = JSON.stringify(content)
                 break;
-        
+
             default:
                 formatedContent = content
                 break;
@@ -161,7 +161,7 @@ export class FileHandler {
      */
     exists = (path: string) => {
         return fs.existsSync(path)
-    } 
+    }
 
     /**
      * Creates a directpry at the given path in sync
@@ -200,11 +200,11 @@ export class FileHandler {
      * createPath([`mypath`, `myFile.md`], true)
      * ```
      */
-    createPath = (paths: string[], fromAppTempDir: boolean = true, fromRunningDir: boolean = false):string => {
+    createPath = (paths: string[], fromAppTempDir: boolean = true, fromRunningDir: boolean = false): string => {
         if (fromAppTempDir === true) {
             return path.join(this.tempDirectoryPath, ...paths)
         } else if (fromRunningDir) {
-            return path.join(__dirname, ...paths)
+            return path.join(process.cwd(), ...paths)
         } else {
             return path.join(...paths)
         }
